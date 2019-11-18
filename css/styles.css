@@ -1,6 +1,18 @@
 body {
   font-family: Open Sans, Arial, sans-serif;
   margin: 0px;
+  min-width: 320px;
+}
+
+h1 {
+  margin: 0;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+}
+
+h2, h3, h4, h5 {
+  margin: 0;
 }
 
 a {
@@ -35,12 +47,8 @@ a {
 
 .surface-logo {
   width: 192px;
-  margin-top: 45px;
-  margin-left: 50%;
-  margin-right: 50%;
   display: flex;
 }
-
 
 .welcome::after {
   content: "";
@@ -59,6 +67,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-content: center;
 }
 
 .title {
@@ -66,38 +75,55 @@ a {
   max-width: 1558px;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
-  margin-top: 290px;
-  
-
-}
+  margin-top: 287px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ }
 
 .welcome-title-second {
   text-align: right;
+  line-height: 0.95em;
+  
  } 
 
-.welcome-title, .welcome-title-second {
+.welcome-title {
   text-transform: uppercase; 
   font-size: 5.62em;
-  margin-top: -0.3em;
-  margin-bottom: -0.3em;
-
+  line-height: 0.95em;
 }
 
 .get-app {
   display: flex;
-  width: 35%;
-  max-width: 674px;
+  width: 39.06%;
+  max-width: 751px;
+  min-width: 700px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 222px;
+  justify-content: space-evenly;
+  align-self: center;
+  margin-top: 220px;
+  position: relative;
+}
+
+.apple-logo {
+  flex-shrink: 1;
+  width: 50px;
+  margin-bottom: 2px;
+}
+
+.google-play-logo {
+  flex-shrink: 1;
+  width: 41px;
+  margin-bottom: 2px;
+}
+
+.button-container {
+  width: 44.9%;
+  display: flex;
 }
 
 .app-store-button, .google-play-button {
-  width: 310px;
   background-color: #5e42b0;
   border-radius: 37px;
   height: 77px;
@@ -105,25 +131,25 @@ a {
   font-size: 14px;
   text-decoration: none;
   color: #fff;
-  padding-left: 100px;
+  padding-left: 35px;
+  display: flex;
+  box-sizing: border-box;
+  flex-grow: 2;
+}
+
+.app-store-button:hover {
+  background-color: #6748c2; 
+}
+
+.google-play-button:hover {
+  background-color: #6748c2; 
+}
+
+.button-span-container {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   justify-content: center;
-}
-
-.app-store-button {
-  background-image: url("../svg/apple_logo_white.svg");
-  background-repeat: no-repeat;
-  background-size: 42px;
-  background-position: 39px 16px;
-}
-
-.google-play-button {
-  background-image: url("../svg/google-play-white.svg");
-  background-repeat: no-repeat;
-  background-size: 42px;
-  background-position: 39px 16px;
+  margin-left: 24px;
 }
 
 .store-name {
@@ -134,28 +160,50 @@ a {
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px; 
 }
 
-.section__headline {
-  margin-top: 30px;
+.section-headline {
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 700;
+  color:#e7e7e7;
+  margin-bottom: 20px;
+}
+
+.section-headline-right, .section-headline-left {
   text-transform: uppercase;
   font-size: 5rem;
   font-weight: 700;
   color: #e7e7e7;
   margin-bottom: 20px;
+  margin-left: 51.8%
 }
+
+.section-headline-left {
+  margin-left: 9.6%;
+  margin-top: 100px;
+}
+
 
 .footballer {
   position: absolute;
-  margin-left: 10%;
+  right: 50%;
+  top: 0;
 }
 
 .headline-and-counter {
   display: flex;
   align-items: center;
-  padding-top: 50px; 
+  margin-top: 75px; 
 }
   
+.headline-and-counter-nth {
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+}
+
 .counter, .counter-inverted, .counter-inverted-players {
   font-size: 1.125em;
   font-weight: 700;
@@ -222,12 +270,15 @@ a {
   color: #fff;
 }
 
+.athlets {
+  padding-top: 80px;
+  position: relative;
+}
+
 .athlets-connection {
   padding-left: 52%;
   padding-bottom: 45px;
-  padding-right: 10%; 
-  padding-top: 30px;
-  margin-top: 20px; 
+  padding-right: 10%;
 }
 
 .athlets-collaboration {
@@ -246,14 +297,13 @@ a {
 
 .basketballer {
   position: absolute;
-  margin-left: 33%;
+  left: 42.3%;
 }
 
 .players-connection {
   padding-left: 9.9%;
   padding-bottom: 45px;
-  padding-right: 50%; 
-  padding-top: 30px;
+  padding-right: 60%; 
   margin-top: 20px; 
 }
 
@@ -280,12 +330,18 @@ a {
   width: 50%; 
   object-fit: cover;
   display: flex;
-
+  height: 730px;
 }
+
+.step-picture-card-wide {
+  width: 100%;
+  object-fit: cover;
+}
+
 
 .step-text {
   padding-bottom: 12%;
-  padding-top: 12%;
+  padding-top: 11.2%;
   padding-left: 6.7%;
   padding-right: 10%;
   display:block;
@@ -295,9 +351,9 @@ a {
 
 .step-text-left {
   padding-bottom: 12%;
-  padding-top: 12%;
+  padding-top: 11.2%;
   padding-left: 6.7%;
-
+  padding-right: 6.7%;
   display:block;
   width: 50%;
   box-sizing: border-box;
@@ -305,9 +361,9 @@ a {
 
 .main-text-large {
   letter-spacing: 0.065em;
-  margin-top: 20px;
+  margin-top: 48px;
   margin-bottom: 0;
-  font-size: 1.25em: 
+  font-size: 1.25em; 
 }
 
 .counter-large  {
@@ -332,13 +388,13 @@ a {
 
 .step-count {
   position: absolute;
-  left: 46.5%;
-  top: 45%;
+  left: calc(50% - 129px/2);
+  top: 28.9%;
   box-sizing: border-box;
-  padding: 2.6em 3.2em; 
+  padding: 2.6em 3.2em;
+  display: flex;
   background-color: #5e42b0;
   z-index: 3;
-  display: flex;
 }
 
 .download-app {
@@ -379,16 +435,16 @@ a {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
 }
 
 .download-app {
   padding-top: 220px;
   padding-bottom: 50px; 
-
 }
 
 .download-app-title {
-  width: 45.8%;
+  width: 870px;
   display: flex;
   flex-wrap: wrap;
   margin-left: auto;
@@ -409,7 +465,7 @@ a {
   color: #a496ca;
   text-transform: uppercase;
   font-weight: 400;
-  margin: 0;
+  margin-left: -8px;
 }
 
 .surface-app-icon {
@@ -418,23 +474,16 @@ a {
   height: 130px;
   box-sizing: border-box;
   z-index: 4;
-  display: block;
+  display: flex;
   background: linear-gradient(#7656d6, #50379b);
   position: relative;
 }
 
-.surface-app-icon::after {
-  content: "";
-  background-image: url("../svg/surface_logo-white.svg");
-  background-size: 103px;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.icon-path {
+  width: 80%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto; 
 }
 
 .header-container {
@@ -443,7 +492,6 @@ a {
 
 .surface-logo-footer {
   width: 192px;
-  margin-top: 165px;
   margin-left: 50%;
   margin-right: 50%;
   display: flex;
@@ -452,14 +500,528 @@ a {
   margin-right: auto; 
 }
 
+.surface-logo-container {
+  margin-top: 165px;
+}
+
+
 .get-app-footer {
   display: flex;
-  width: 35%;
-  max-width: 674px;
+  width: 39.06%;
+  max-width: 751px;
+  min-width: 700px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: space-evenly;
+  align-self: center;
   margin-top: 150px;
 }
+
+/* !!!!!!!!! MEDIA !!!!!!!!!!!!!*/
+
+@media (min-width: 641px) and (max-width: 960px) {
+  .welcome {
+    background-image: url("../img/football_1280.jpg");
+  }
+
+  .welcome-title {
+    font-size: 4em;
+    line-height: 0.95em;
+  }
+
+  .surface-logo, .surface-logo-footer {
+    width: 206px;
+}
+
+  .title {
+    width: 81%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 180px;
+ }
+
+.section-headline-right {
+  margin-left: 38%;
+}
+
+.section-headline-left {
+  margin-left: 3.7%;
+  margin-top: 55px;
+}
+
+  .feature-headline {
+    font-size: 2em;
+  }
+
+  .athlets {
+    padding-top: 35px;
+    position: relative;
+  }
+
+  .footballer {
+    margin-top: 70px;
+    right: 57.5%;
+  }
+
+  .headline-and-counter {
+    margin-top: 0; 
+  }
+  
+  .headline-and-counter-nth {
+    padding-top: 35px;
+  }
+
+  .athlets-connection {
+    padding-left: 38.1%;
+    padding-bottom: 40px;
+    padding-right: 6.25%; 
+  }
+
+  .athlets-collaboration {
+    padding-left: 38.1%;
+    padding-bottom: 40px;
+    padding-right: 6.25%; 
+  }
+
+  .athlets-growth {
+    padding-left: 38.1%;
+    padding-bottom: 40px;
+    padding-right: 6.25%; 
+  }
+
+  .basketballer {
+    position: absolute;
+    right: 0px;
+    margin-top: -10px;
+  }
+
+  .players-connection {
+    padding-left: 4.16%;
+    padding-bottom: 30px;
+    padding-right: 45.9%; 
+    padding-top: 10px;
+  }
+
+  .players-collaboration {
+    padding-left: 4.16%;
+    padding-bottom: 30px;
+    padding-right: 45.9%; 
+    margin-top: 20px; 
+  }
+
+  .players-growth {
+    padding-left: 4.16%;
+    padding-bottom: 30px;
+    padding-right: 45.9%; 
+  }
+
+  .step {
+    flex-wrap: wrap;
+  }
+
+  .step-picture-card {
+    object-fit: cover;
+    display: flex;
+    height: 585px;
+    width: 100%;
+    order: -1;
+  }
+
+  .step-count {
+    position: absolute;
+    top: 505px;
+    left: 32px;
+    box-sizing: border-box;
+    padding: 2.38em 2.8em;
+    background-color: #5e42b0;
+    z-index: 3;
+    display: flex;
+  }
+
+  .step-text {
+    padding-bottom: 62px;
+    padding-top: 62px;
+    padding-left: 4.16%;
+    padding-right: 10%;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .step-text-left {
+    padding-bottom: 62px;
+    padding-top: 62px;
+    padding-left: 4.16%;
+    padding-right: 10%;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .main-text-large {
+    font-size: 1.5em; 
+    margin: 0;
+  }
+
+  .download-app {
+    background-image: url("../img/game_1280.jpg");
+    padding-bottom: 23px;
+  }
+
+  .download-app-title {
+    width: 91.6%;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0; 
+  }
+ 
+ .header-container {
+    margin-top: 70px; 
+    margin-left: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+ }
+
+   .button-container {
+    width: 40.5%;
+    display: flex;
+  }
+
+  .get-app-footer {
+    width: 91.6%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-self: center;
+    margin-top: 220px;
+    min-width: 639px;
+  }
+
+  .surface-logo-container {
+    margin-top: 55px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 700px) {
+  .download-app-header {
+    font-size: 4em;
+    margin: -0.15em;
+  }
+
+  .download-app-slogan {
+    font-size: 1.75em;
+  }
+}
+
+@media (max-width: 640px) {
+  .welcome {
+    background-image: url("../img/football_767.jpg");
+    padding-top: 32px;
+    padding-bottom: 84px;
+  }
+
+  .welcome-title {
+    font-size: 1.75em;
+    line-height: 0.95em;
+  }
+
+ .welcome-title-second {
+    margin-top: 25px;
+ }
+
+  .surface-logo {
+    width: 135px;
+    align-self: center;
+    margin: 0;
+  }
+
+  .title {
+    width: 81%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 130px;
+ }
+
+  .get-app {
+    display: flex;
+    width: 87.5%;
+    max-width: 320px;
+    min-width: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 75px;
+  }
+
+  .apple-logo {
+    width: 22px;
+    margin-bottom: 2px;
+  }
+
+  .google-play-logo {
+    width: 21px;
+    margin-bottom: 2px;
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+  }
+
+  .app-store-button, .google-play-button {
+    height: 35px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    margin-top: 14px; 
+    padding-left: 29%
+  }
+
+  .button-span-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 9px;
+  }
+
+  .get-on-store {
+    font-size: 0.5em;
+  } 
+
+  .store-name {
+    font-weight: 700;
+    font-size: 0.5em;
+  }
+
+  .main__layout {
+    margin-top: 8px;
+  }
+
+  .section-headline-right {
+    font-size: 3.13em;
+    display: flex;
+    order: -1;
+    margin-left: 6.25%;
+    margin-bottom: 0;
+  }
+
+  .section-headline-left {
+    font-size: 3.13em;
+    display: flex;
+    order: -1;
+    margin-left: 6.25%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .feature-headline {
+    font-size: 2em;
+  }
+
+  .footballer {
+    display: flex;
+    position: static;
+    max-width: 190px;
+    align-self: center;
+  }
+
+  .headline-and-counter {
+    margin-top: 30px;
+    font-size: 0.72em 
+  }
+  
+  .headline-and-counter-nth {
+    padding-top: 30px;
+    font-size: 0.72em 
+  }
+
+  .counter {
+    margin-right: 8px; 
+  }
+
+  .main-text {
+    font-size: 0.937em;
+  }
+
+  .athlets-connection {
+    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-left: 6.25%; 
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+  }
+
+  .athlets-collaboration {
+    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-left: 6.25%; 
+  }
+
+  .athlets-growth {
+    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-left: 6.25%; 
+  }
+
+  .athlets {
+    padding-top: 0px;
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+  }
+
+  .basketballer {
+    display: flex;
+    position: static;
+    align-self: center;
+  }
+
+  .players-connection {
+    padding-left: 6.25%;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-right: 6.25%; 
+    background-color: #fafafa; 
+  }
+
+  .players-collaboration {
+    padding-left: 6.25%;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-right: 6.25%; 
+  }
+
+  .players-growth {
+    padding-left: 6.25%;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-right: 6.25%; 
+  }
+  
+  .players {
+    padding-top: 5px;
+    margin-left: 0;
+    display:flex;
+    flex-direction: column;
+  }
+
+  .step {
+    flex-wrap: wrap;
+  }
+
+  .step-picture-card {
+    object-fit: cover;
+    display: flex;
+    height: 351px;
+    width: 100%;
+    order: -1;
+  }
+
+  .step-count {
+    position: absolute;
+    top: 293px;
+    left: 20px;
+    box-sizing: border-box;
+    padding: 2.5em 3em;
+    background-color: #5e42b0;
+    z-index: 3;
+    display: flex;
+    font-size: 0.58em;
+  }
+
+  .step-text {
+    padding-bottom: 70px;
+    padding-left: 6.25%;
+    padding-right: 6.25%;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .step-text-left {
+    padding-bottom: 62px;
+    padding-left: 4.16%;
+    padding-right: 10%;
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .section-headline {
+    font-size: 2em;
+  }
+
+  .main-text-large {
+    font-size: 1em; 
+    margin: 0;
+  }
+  
+  .download-app {
+    background-image: url("../img/game_767.jpg");
+    padding-bottom: 10px;
+    padding-top: 100px;
+  }
+
+  .surface-app-icon {
+    border-radius: 18px;
+    width: 74px;
+    height: 74px;
+    box-sizing: border-box;
+  }
+
+  .download-app-title {
+    width: 91.6%;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+  }
+ 
+ .header-container {
+    margin-top: 40px; 
+    margin-left: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+ }
+
+  .download-app-header {
+    font-size: 2em;
+    margin: -0.15em;
+  }
+
+  .download-app-slogan {
+    font-size: 0.875em;
+  }
+
+   .button-container {
+    width: 100%;
+    display: flex;
+  }
+
+  .get-app-footer {
+    display: flex;
+    width: 87.5%;
+    max-width: 320px;
+    min-width: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 75px;
+    flex-direction: column;
+  }
+
+  .surface-logo-footer {
+    width: 135px;
+  }
+
+  .surface-logo-container {
+    margin-top: 80px;
+  }
+
+}
+
+
+
