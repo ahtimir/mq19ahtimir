@@ -43,6 +43,7 @@ a {
   box-sizing: border-box;
   color: #fff;
   padding-bottom: 110px;
+  padding-top: 45px;
 }
 
 .surface-logo {
@@ -74,7 +75,6 @@ a {
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
-  padding-top: 45px;
 }
 
 .title {
@@ -168,7 +168,9 @@ a {
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px; 
+  padding-top: 20px; 
+  position: relative;
+  overflow: hidden;
 }
 
 .section-headline {
@@ -203,13 +205,11 @@ a {
 .headline-and-counter {
   display: flex;
   align-items: center;
-  
 }
   
 .headline-and-counter-nth {
   display: flex;
   align-items: center;
-  padding-top: 50px;
 }
 
 .counter, .counter-inverted, .counter-inverted-players {
@@ -287,7 +287,7 @@ a {
   padding-left: 52%;
   padding-bottom: 45px;
   padding-right: 10%;
-  margin-top: 75px; 
+  margin-top: 75px;
 }
 
 .athlets-collaboration {
@@ -295,6 +295,7 @@ a {
   padding-bottom: 45px;
   background-color: #f6f4fa;
   padding-right: 10%; 
+  padding-top: 50px; 
 }
 
 .athlets-growth {
@@ -302,6 +303,7 @@ a {
   padding-bottom: 45px;
   background-color: #5e42b0;
   padding-right: 10%; 
+  padding-top: 50px; 
 }
 
 .basketballer {
@@ -321,13 +323,15 @@ a {
   padding-bottom: 45px;
   background-color: #f6f4fa;
   padding-right: 50%; 
+  padding-top: 50px; 
 }
 
 .players-growth {
   padding-left: 9.9%;
   padding-bottom: 45px;
   background-color: #0a0e34;
-  padding-right: 50%; 
+  padding-right: 50%;
+  padding-top: 50px; 
 }
 
 .step {
@@ -347,7 +351,6 @@ a {
   width: 100%;
   object-fit: cover;
 }
-
 
 .step-text {
   padding-bottom: 12%;
@@ -391,20 +394,26 @@ a {
   content: "";
   height: 5px;
   width: auto;
-  margin-top: 2px;
   background-color: #8f7bc8;
   border-radius: 2px;
+  margin-left: auto;
+  margin-right: auto
 }
 
 .step-count {
   position: absolute;
-  left: calc(50% - 129px/2);
+  left: calc(50% - 168px/2);
   top: 28.9%;
   box-sizing: border-box;
-  padding: 2.6em 3.2em;
+  width: 8.8%;
+  height: 155px;
   display: flex;
   background-color: #5e42b0;
   z-index: 3;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 57px;
+  min-width: 145px;
 }
 
 .download-app {
@@ -458,7 +467,7 @@ a {
 .download-app-header {
   text-transform: uppercase; 
   font-size: 5em;
-  margin: -0.15em;
+  line-height: 0.95em;
 }
 
 .download-app-slogan {
@@ -466,7 +475,6 @@ a {
   color: #a496ca;
   text-transform: uppercase;
   font-weight: 400;
-  margin-left: -8px;
 }
 
 .surface-app-icon {
@@ -513,6 +521,7 @@ a {
 @media (min-width: 641px) and (max-width: 960px) {
   .welcome {
     background-image: url("../img/football_1280.jpg");
+    padding-top: 40px;
   }
 
   .welcome-title {
@@ -533,7 +542,6 @@ a {
     margin-right: 50%;
     display: flex;
     z-index: 4;
-    margin-top: 40px;
   }
 
   .title {
@@ -639,20 +647,22 @@ a {
   .step-picture-card {
     object-fit: cover;
     display: flex;
-    height: 585px;
     width: 100%;
     order: -1;
+    position: relative;
   }
 
   .step-count {
     position: absolute;
-    top: 505px;
+    bottom: 0;
     left: 32px;
     box-sizing: border-box;
-    padding: 2.38em 2.8em;
+    height: 118px;
     background-color: #5e42b0;
     z-index: 3;
     display: flex;
+    min-width: 118px;
+    padding-top: 38px;
   }
 
   .step-text {
@@ -694,6 +704,10 @@ a {
     margin-right: 0; 
   }
  
+  .download-app-header {
+    line-height: 1.2em;
+  }
+
   .header-container {
     margin-top: 70px; 
     margin-left: 0;
@@ -738,10 +752,6 @@ a {
     background-image: url("../img/football_767.jpg");
     padding-top: 32px;
     padding-bottom: 84px;
-  }
-
-  .welcome__container {
-    padding-top: 0;
   }
 
   .welcome-title {
@@ -941,26 +951,22 @@ a {
   .step-picture-card {
     object-fit: cover;
     display: flex;
-    height: 351px;
     width: 100%;
     order: -1;
   }
 
   .step-count {
-    position: absolute;
-    top: 293px;
+    top: 420px;
     left: 20px;
-    box-sizing: border-box;
-    padding: 2.5em 3em;
-    background-color: #5e42b0;
-    z-index: 3;
-    display: flex;
     font-size: 0.58em;
+    height: 80px;
+    min-width: 80px;
+    padding-top: 25px;
   }
 
   .step-text {
     padding-bottom: 70px;
-    padding-left: 6.25%;
+    padding-left: 4.16%;
     padding-right: 6.25%;
     display:flex;
     flex-direction: column;
@@ -1017,7 +1023,7 @@ a {
 
   .download-app-header {
     font-size: 2em;
-    margin: -0.15em;
+    line-height: 1.4em;
   }
 
   .download-app-slogan {
