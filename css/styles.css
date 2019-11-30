@@ -283,6 +283,10 @@ a {
   position: relative;
 }
 
+.players {
+  position: relative;
+}
+
 .athlets-connection {
   padding-left: 52%;
   padding-bottom: 45px;
@@ -309,6 +313,7 @@ a {
 .basketballer {
   position: absolute;
   left: 42.3%;
+  top: -100px;
 }
 
 .players-connection {
@@ -336,15 +341,20 @@ a {
 
 .step {
   display: flex;
-  position: relative;
   box-sizing: border-box;
 }
 
+.picture-counter-container {
+  width: 50%;
+  object-fit: cover;
+  min-height: 730px;
+  position: relative;
+}
+
 .step-picture-card {
-  width: 50%; 
   object-fit: cover;
   display: flex;
-  
+  height: 100%;
 }
 
 .step-picture-card-wide {
@@ -354,7 +364,7 @@ a {
 
 .step-text {
   padding-bottom: 12%;
-  padding-top: 11.2%;
+  padding-top: 240px;
   padding-left: 6.7%;
   padding-right: 10%;
   display:block;
@@ -364,7 +374,7 @@ a {
 
 .step-text-left {
   padding-bottom: 12%;
-  padding-top: 11.2%;
+  padding-top: 12.2%;
   padding-left: 6.7%;
   padding-right: 6.7%;
   display:block;
@@ -402,10 +412,26 @@ a {
 
 .step-count {
   position: absolute;
-  left: calc(50% - 168px/2);
-  top: 28.9%;
+  left: calc(100% - 167px/2);
+  top: 30%;
   box-sizing: border-box;
-  width: 8.8%;
+  width: 17.4%;
+  height: 155px;
+  display: flex;
+  background-color: #5e42b0;
+  z-index: 3;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 57px;
+  min-width: 145px;
+}
+
+.step-count-2 {
+  position: absolute;
+  right: calc(100% - 167px/2);
+  top: 30%;
+  box-sizing: border-box;
+  width: 17.4%;
   height: 155px;
   display: flex;
   background-color: #5e42b0;
@@ -613,8 +639,10 @@ a {
 
   .basketballer {
     position: absolute;
-    right: 0px;
-    margin-top: -10px;
+    right: 0;
+    left: unset;
+    margin-top: -47px;
+    top: unset;
   }
 
   .players-connection {
@@ -644,17 +672,22 @@ a {
     flex-wrap: wrap;
   }
 
+  .picture-counter-container {
+    width: 100%;
+    max-height: 585px;
+    min-height: 500px;
+    order: -1;
+  }
+
   .step-picture-card {
     object-fit: cover;
     display: flex;
     width: 100%;
-    order: -1;
-    position: relative;
   }
 
-  .step-count {
+  .step-count, .step-count-2 {
     position: absolute;
-    bottom: 0;
+    top: 85%;
     left: 32px;
     box-sizing: border-box;
     height: 118px;
@@ -662,6 +695,7 @@ a {
     z-index: 3;
     display: flex;
     min-width: 118px;
+    max-width: 118px;
     padding-top: 38px;
   }
 
@@ -856,9 +890,9 @@ a {
 
   .footballer {
     display: flex;
-    position: static;
-    max-width: 190px;
-    align-self: center;
+    position: absolute;
+    left: 21%;
+    top: 80px;
   }
 
   .headline-and-counter {
@@ -881,12 +915,12 @@ a {
 
   .athlets-connection {
     padding-bottom: 50px;
-    padding-top: 20px;
+    padding-top: 40px;
     padding-left: 6.25%; 
     display: flex;
     flex-direction: column;
     background-color: #fafafa;
-    margin-top: 0;
+    margin-top: 240px;
   }
 
   .athlets-collaboration {
@@ -910,17 +944,19 @@ a {
 
   .basketballer {
     display: flex;
-    position: static;
-    align-self: center;
+    position: absolute;
+    right: 2.8%;
+    left: unset;
+    top: 80px;
   }
 
   .players-connection {
     padding-left: 6.25%;
     padding-bottom: 50px;
-    padding-top: 20px;
+    padding-top: 40px;
     padding-right: 6.25%; 
     background-color: #fafafa; 
-    margin-top: 0;
+    margin-top: 240px;
   }
 
   .players-collaboration {
@@ -955,12 +991,20 @@ a {
     order: -1;
   }
 
-  .step-count {
-    top: 420px;
+  .picture-counter-container {
+    width: 100%;
+    order: -1;
+    max-height: 351px;
+    min-height: unset;
+  }
+
+  .step-count, .step-count-2 {
+    top: 81%;
     left: 20px;
     font-size: 0.58em;
     height: 80px;
     min-width: 80px;
+    max-width: 80px;
     padding-top: 25px;
   }
 
@@ -972,6 +1016,7 @@ a {
     flex-direction: column;
     width: 100%;
     box-sizing: border-box;
+    padding-top: 30px;
   }
 
   .step-text-left {
@@ -982,6 +1027,7 @@ a {
     flex-direction: column;
     width: 100%;
     box-sizing: border-box;
+    padding-top: 30px;
   }
 
   .section-headline {
