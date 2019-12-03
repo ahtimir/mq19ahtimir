@@ -770,7 +770,7 @@ a {
   }
 }
 
-@media (min-width: 641px) and (max-width: 722px) {
+@media (min-width: 641px) and (max-width: 740px) {
   .download-app-header {
     font-size: 4em;
     margin: -0.15em;
